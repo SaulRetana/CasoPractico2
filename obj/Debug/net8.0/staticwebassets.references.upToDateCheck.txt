@@ -1,0 +1,4 @@
+C:\Fide\Programación Avanzada en Web\Casos de Estudio\CE2\CasoPractico2\CasoPractico2API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Fide\Programación Avanzada en Web\Casos de Estudio\CE2\CasoPractico2\CasoPractico2API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Fide\Programación Avanzada en Web\Casos de Estudio\CE2\CasoPractico2\CasoPractico2API\obj\Debug\net8.0\staticwebassets.build.json
+C:\Fide\Programación Avanzada en Web\Casos de Estudio\CE2\CasoPractico2\CasoPractico2API\obj\Debug\net8.0\staticwebassets.build.json

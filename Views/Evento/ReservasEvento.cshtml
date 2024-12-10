@@ -1,0 +1,24 @@
+﻿@model Evento
+
+<h2>@Model.Nombre</h2>
+<hr />
+<br />
+<h3>Listado de Reservas</h3>
+<div class="row">
+    @foreach (var item in Model.Reservas)
+    {
+        <div class="col-md-4 col-sm-12">
+            @await Html.PartialAsync("_Reserva", item)
+        </div>
+    }
+</div>
+
+@section Scripts {
+
+    @if (TempData["Mensaje"] != null)
+    {
+        <script>
+            alert('@TempData["Mensaje"]')
+        </script>
+    }
+}

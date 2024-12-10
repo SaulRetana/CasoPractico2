@@ -1,0 +1,27 @@
+﻿@model Reserva
+@{
+    string Estado = string.Empty;
+    @if (Model.Estado)
+    {
+        Estado ="Activa";
+    }
+    else
+    {
+        Estado ="Cancelada";
+    }
+}
+
+<div class=" card text-black border-2" style="border-color: white !important">
+    @*Establece el color de fondo o borde*@
+    <div class="card-header text-black" style="background-color : white !important">
+        <h3 class="text-black">@Model.Fecha.ToShortDateString()</h3>
+    </div>
+    <div class="card-body text-black" style="background-color:beige !important">
+        <p class ="text-black">Usuario de Reserva: @Model.Usuario.Nombre</p>
+        <p class="text-black">Evento : @Model.Evento.Nombre</p>
+        <p class="text-black">Esta reserva se encuentra @Estado</p>
+        <div>
+            @Html.Partial("_verMapa")
+        </div>
+    </div>
+</div>

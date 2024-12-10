@@ -1,0 +1,4 @@
+﻿@model int
+@inject ICantidadRegistros registros
+
+<p>La cantidad de reservas son: @await registros.cantidadReservarXEvento(Model)</p>

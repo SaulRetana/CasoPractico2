@@ -36,10 +36,10 @@ namespace EventCorp.Controllers
             {
                 categoria.FechaRegistro = DateTime.Now;
 
-                
+
                 var usuarioActivo = await _userService.GetUserByIdAsync(1);
 
-                
+
                 categoria.UsuarioRegistro = usuarioActivo != null ? usuarioActivo.NombreCompleto : "UsuarioDesconocido";
 
                 _context.Add(categoria);

@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Dashboard Administradores";
+    var totalEventos = ViewData["TotalEventos"];
+    var totalUsuariosActivos = ViewData["TotalUsuariosActivos"];
+    var asistentesMesActual = ViewData["AsistentesMesActual"];
+    var topEventos = ViewData["TopEventos"] as List<dynamic>;
+}
+
+<h1 class="display-4">Dashboard de Administradores</h1>
+<div class="container">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card text-white bg-primary mb-3">
+                <div class="card-header">Total de Eventos</div>
+                <div class="card-body">
+                    <h5 class="card-title">@totalEventos</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-success mb-3">
+                <div class="card-header">Usuarios Activos</div>
+                <div class="card-body">
+                    <h5 class="card-title">@totalUsuariosActivos</h5>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card text-white bg-info mb-3">
+                <div class="card-header">Asistentes este Mes</div>
+                <div class="card-body">
+                    <h5 class="card-title">@asistentesMesActual</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <h2>Top 5 Eventos Más Populares</h2>
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Evento</th>
+                <th>Total Asistentes</th>
+            </tr>
+        </thead>
+        <tbody>
+            @if (topEventos != null && topEventos.Any())
+            {
+                @foreach (var evento in topEventos)
+                {
+                    <tr>
+                        <td>@evento.Evento</td>
+                        <td>@evento.TotalAsistentes</td>
+                    </tr>
+                }
+            }
+            else
+            {
+                <tr>
+                    <td colspan="2">No hay eventos disponibles.</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
